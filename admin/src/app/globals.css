@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+img {
+  max-height: 100%;
+}
+
+input,
+textarea,
+select {
+  @apply border border-gray-200 rounded-sm w-full py-2 px-3;
+  @apply mb-2;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply border-blue-900;
+}
+h1 {
+  @apply text-gray-800 mb-4 text-xl;
+}
+
+label {
+  @apply text-gray-600 text-sm;
+}
+.btn-primary {
+  @apply bg-primary text-white px-4 rounded-sm py-1 shadow-sm;
+}
+table.basic {
+  @apply w-full bg-white rounded-sm shadow-md;
+}
+table.basic thead tr td {
+  @apply text-sm text-gray-600 uppercase border-b border-gray-200 px-4 py-2;
+}
+table.basic tr td {
+  @apply px-4 py-1;
+}
+table.basic a {
+  @apply px-4 rounded-sm py-1 inline-flex mx-1 items-center gap-1;
+}
+.btn-red {
+  @apply bg-red-200 text-red-600 px-4 rounded-sm py-1 shadow-sm;
+}
+.btn-default {
+  @apply bg-white text-gray-800 border border-gray-200 px-4 rounded-sm py-1 shadow-sm;
+}
+.btn-red,
+.btn-default {
+  @apply px-4 py-1 rounded-md;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:-webkit-autofill {
+  background: linear-gradient(to right bottom, #b07bac, #5f7367) !important;
+  background-clip: content-box !important;
+  color: #ffffff !important;
+  border: 1px solid #5f7367 !important;
+  box-shadow: 0 0 0px 1000px #b07bac inset !important;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background: linear-gradient(to right bottom, #b07bac, #5f7367) !important;
+  color: #ffffff !important;
+  border: 1px solid #5f7367 !important;
+  box-shadow: 0 0 0px 1000px #b07bac inset !important;
+}
